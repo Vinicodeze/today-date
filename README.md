@@ -13,7 +13,7 @@ Este é um projeto simples desenvolvido com HTML, CSS e JavaScript que exibe a d
 - JavaScript 
 
 ##  Objetivo
-Este projeto foi criado com o objetivo de praticar manipulação de objetos em JavaScript e trabalhar com datas usando a API `Date`.
+Este projeto foi criado com o objetivo de praticar manipulação de objetos em JavaScript e trabalhar com datas usando Date.
 
 ##  Como usar
 1. Copie o endereço: https://vinicodeze.github.io/today-date/
