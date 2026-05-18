@@ -6,21 +6,50 @@
     <link rel="stylesheet" href="assets/CSS/style.css">
     <title>TODAY</title>
 </head>
+
 <body>
+
     <header>
         <h1>Bem vindo ao Site TODAY</h1>
-        <p>Este site irá mostrar exatamente o dia de hoje para o usuário, seja qual for o ano, data, dia, mês, etc.</p>
+        <p>
+            Este site irá mostrar exatamente o dia de hoje para o usuário,
+            seja qual for o ano, data, dia, mês, etc.
+        </p>
     </header>
 
     <main>
+
         <section class="container">
-            <h2>O dia em  que você está acessando é:</h2>
+            <h2>O dia em que você está acessando é:</h2>
             <p></p>
+
             <h2>Objetivo</h2>
-            <p>Este sistema foi criado apenas para testar meus conhecimentos usando objetos e JavaScript.</p>
+            <p>
+                Este sistema foi criado apenas para testar meus conhecimentos usando objetos e JavaScript.
+            </p>
+        </section>
+
+        <section class="formulario">
+
+            <form>
+                <label for="aniversario">
+                    Insira a data de seu aniversário
+                </label>
+
+                <input type="date" id="aniversario">
+
+                <button type="button" onclick="verificarAniversario()">
+                    Verificar
+                </button>
+            </form>
+
+            <p id="resultado"></p>
+
         </section>
 
     </main>
+
     <script src="assets/JS/app.js"></script>
+
 </body>
 </html>
