@@ -31,40 +31,40 @@ function verificarAniversario() {
         return;
     }
 
-    const aniversario = new Date(input);
+    const [anoInput, mesInput, diaInput] = input.split('-');
 
+    const aniversario = new Date(anoInput, mesInput -1, diaInput);
     const hoje = new Date();
+
     hoje.setHours(0, 0, 0, 0);
     aniversario.setHours(0, 0, 0, 0);
 
-    const diaAtual = hoje.getDate();
-    const mesAtual = hoje.getMonth();
+    const diaHoje = hoje.getDate();
+    const mesHoje = hoje.getMonth();
 
-    const diaAniversario = aniversario.getDate();
-    const mesAniversario = aniversario.getMonth();
+    const diaAniv = aniversario.getDate();
+    const mesAniv = aniversario.getMonth();
 
-    if (diaAtual === diaAniversario && mesAtual === mesAniversario) {
-        resultado.innerHTML = ' Feliz aniversário! Hoje é seu dia!';
+    if (diaHoje === diaAniv && mesHoje === mesAniv) {
+        resultado.innerHTML = " Feliz aniversário! Hoje é seu dia!";
         return;
     }
 
-    
-    let proximoAniversario = new Date(
+   
+    let proximo = new Date(
         hoje.getFullYear(),
-        mesAniversario,
-        diaAniversario
+        mesAniv,
+        diaAniv
     );
 
-    proximoAniversario.setHours(0, 0, 0, 0);
-
-    if (proximoAniversario < hoje) {
-        proximoAniversario.setFullYear(hoje.getFullYear() + 1);
+    if (proximo < hoje) {
+        proximo.setFullYear(hoje.getFullYear() + 1);
     }
 
-    const diferenca = proximoAniversario - hoje;
+    const diferenca = proximo - hoje;
 
-    const diasFaltando = Math.ceil(diferenca / (1000 * 60 * 60 * 24));
+    const diasFaltando = Math.round(diferenca /(1000 * 60 * 60 * 24));
 
-    resultado.innerHTML = ` Faltam ${diasFaltando} dias para o seu aniversário!`;
+    resultado.innerHTML = ` Faltam ${diasFaltando} dias para seu aniversário!`;
 }
 
